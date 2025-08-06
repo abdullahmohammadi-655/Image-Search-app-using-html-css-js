@@ -31,30 +31,35 @@ form {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, .7);
     border: 12px;
     border: none;
+    font-size: 17px;
 }
 
 #seachbutton {
     margin-left: 5px;
-    padding: 3px 5px;
+    padding: 3px 6px;
     height: 35px;
-    width: 65px;
+    width: 70px;
     border-radius: 5px;
     background-color: dodgerblue;
     color: white;
     border: none;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, .6);
+    font-size: 17px;
 }
 
 .searchContainer {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .searchOption {
-    width: 290px;
-    height: 200px;
-    margin: 15px;
+    width: 30%;
+    height: 100%;
     margin-top: 35px;
+    
     
 }
 
@@ -63,7 +68,11 @@ form {
     height: 100%;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
+    transition: opacity 0.5s ease;
 }
+ .searchOption img:hover {
+    opacity: 0.8;
+ }
 
 .searchOption a{
    display: block;
@@ -72,12 +81,13 @@ form {
    text-decoration: none;
    color: rgb(0, 0, 0, .7);
    font-size: 14px;
+   border-radius: 0px 0px 12px 12px;
 
 }
 
 .seeMore {
     text-align: center;
-    margin: 100px auto;
+    margin: 70px auto;
      padding: 3px 5px;
     height: 35px;
     display: block;
@@ -85,6 +95,20 @@ form {
     background-color: dodgerblue;
     color: white;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, .7);
-     display: none;
+   border: none;
+   display: none;
 
+}
+
+@media screen and (max-width: 768px) {
+    .searchOption {
+        width: 45%;
+    } 
+
+   
+}
+@media screen and (max-width: 480px){
+    .searchOption {
+        width: 100%;
+    }
 }
